@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div>
+        <div>
+            <input type="text" id="txt1">
+        </div>
+
+        <div>
+            <input type="text" id="txt2">
+        </div>
+
+        <Div>
+            <!-- <button onclick="operation('+')"> Add </button>
+            <button onclick="operation('-')"> Subtract </button>
+            <button onclick="operation('*')"> Multiply </button>
+            <button onclick="operation('/')"> Divide </button> -->
+
+            <select name="opertn" id="operationId"  onchange="operation('optionValue')" >
+                <option disabled selected  > select </option>
+                <option value="+" > Add </option>
+                <option value="-" > Subtract </option>
+                <option value="*" > Multiply </option>
+                <option value="/" >Divide </option>
+
+            </select>
+
+        </Div>
+
+        <div>
+            <span id="sresult">
+
+            </span>
+        </div>
+
+
+
+        <script>
+            function operation(optionValue) {
+                var num1 = parseInt(document.getElementById('txt1').value);
+                var num2 = parseInt(document.getElementById('txt2').value);
+                var spanResult = document.getElementById('sresult');
+                var optionValue = document.getElementById('operationId').value;
+
+
+                if (optionValue == '+') {
+                    var sum = num1 + num2;
+                    spanResult.innerHTML = sum;
+                    spanResult.style.color = 'red';
+
+                }
+
+                else if(optionValue == '-'){
+                    var sum = num1 - num2;
+                    spanResult.innerHTML = sum;
+                    spanResult.style.color = 'red'; 
+                }
+                else if(optionValue =='*'){
+                    var sum = num1 * num2;
+                    spanResult.innerHTML = sum;
+                    spanResult.style.color = 'red';
+
+                }
+                else if(optionValue =='/'){
+                    var sum = num1 / num2;
+                    spanResult.innerHTML = sum;
+                    spanResult.style.color = 'red';
+
+                }
+
+                else{
+                    alert('Click a correct button');
+                }
+
+
+
+
+            }
+
+           
+        </script>
+
+    </div>
+</body>
+
+</html>

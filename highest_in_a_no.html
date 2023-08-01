@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      //    let num =  prompt("Enter a number");
+      //    let highestDigit = 0;
+
+      //   while (num > 0) {
+      //     const digit = num % 10;
+      //     if (digit > highestDigit) {
+      //       highestDigit = digit;
+      //     }
+      //     num = (num - digit) / 10;
+      //     console.log("highest digit in a number is " +num);
+      //   }
+      //   console.log("highest digit in a number is " +num);
+
+      const numArray = [];
+
+      let num = prompt("Enter a number ");
+
+      while (num !== "") {
+         const number = parseInt(num, 10);
+         numArray.push(number);
+
+         if (numArray[0] > numArray[1]) {
+            if (numArray[0] > numArray[2]) {
+               console.log(numArray[0] + ' is the greater than ' + numArray[1] + ' and ' + numArray[2]); 
+            }
+            else
+            console.log(numArray[2] + ' is greater than ' + numArray[0] + 'and' + numArray[1])
+
+
+
+         }
+
+      }
+      
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>
